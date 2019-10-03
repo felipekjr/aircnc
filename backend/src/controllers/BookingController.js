@@ -12,7 +12,8 @@ module.exports = {
             spot: spot_id,
             date,
         });
-
+        
+        //para retornar o objeto todo
         await booking.populate('spot').populate('user').execPopulate();
 
         return res.json(booking);
